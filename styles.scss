@@ -8,15 +8,12 @@ body
     background-color: lightblue;
 }
 
-@for $b from 1 through 3
+@for $b from 1 through 2
 {
     $base-color: rgb(244, 82, 53);
     @if $b == 2
     {
         $base-color: rgb(53, 139, 244);
-    } @else if $b == 3
-    {
-        $base-color: rgb(90, 225, 110);
     }
 
     .elevator-button#{$b}
@@ -151,20 +148,4 @@ body
         background-size: contain;
         background-repeat: no-repeat;
     }
-}
-
-.panel 
-{
-    width: 100vw;
-    height: 12em;
-
-    background-color: rgb(205, 202, 202);
-
-    position: absolute;
-    bottom: 0;
-
-    transform: rotateX(40deg) translateY(2em);
-    z-index: 1;
-
-    outline: 0.75em solid white;
 }
