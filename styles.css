@@ -316,7 +316,7 @@ body {
   left: 30%;
   top: 30%;
   transform-style: preserve-3d;
-  transition: transform 1s 0.1s cubic-bezier(0.82, -0.74, 0.36, 1.56);
+  transition: transform 1s 0.05s cubic-bezier(0.82, -0.74, 0.36, 1.56);
   transform: rotateX(-30deg) rotateY(10deg) translateY(0em) translateX(-10em) translateZ(-10.5em);
   height: 0;
 }
