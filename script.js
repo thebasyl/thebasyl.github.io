@@ -1,4 +1,4 @@
-const colours = ["lightblue", "lightpink", "lightsalmon", "lightgreen", "lightseagreen"];
+const colours = ["lightblue", "lightpink", "lightsalmon", "lightgreen"];
 const randomColour = colours[Math.floor(Math.random() * colours.length)];
 
 document.body.style.backgroundColor = randomColour;
