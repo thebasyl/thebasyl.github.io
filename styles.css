@@ -4,7 +4,7 @@ body {
   background-color: lightblue;
 }
 
-.elevator-button1 {
+.button1 {
   width: 5em;
   height: 5em;
   transform: rotateX(40deg);
@@ -16,7 +16,7 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-.elevator-button1 .elevator-button-layer1 {
+.button1 .button-layer1 {
   width: 5em;
   height: 5em;
   background-color: #f4593d;
@@ -26,10 +26,10 @@ body {
   box-shadow: 0 0 20px 0 rgb(154, 151, 151);
   border-radius: 2.5em;
 }
-:hover > .elevator-button1 .elevator-button-layer1 {
+:hover > .button1 .button-layer1 {
   background-color: #f55c41;
 }
-.elevator-button1 .elevator-button-layer2 {
+.button1 .button-layer2 {
   width: 5em;
   height: 5em;
   background-color: #f56046;
@@ -38,13 +38,13 @@ body {
   transform: translateY(-0.5em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button1 .elevator-button-layer2 {
+:hover > .button1 .button-layer2 {
   background-color: #f5674d;
 }
-:active > .elevator-button1 .elevator-button-layer2 {
+:active > .button1 .button-layer2 {
   transform: translateY(-0.25em);
 }
-.elevator-button1 .elevator-button-layer3 {
+.button1 .button-layer3 {
   width: 5em;
   height: 5em;
   background-color: #f5684e;
@@ -53,13 +53,13 @@ body {
   transform: translateY(-1em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button1 .elevator-button-layer3 {
+:hover > .button1 .button-layer3 {
   background-color: #f67159;
 }
-:active > .elevator-button1 .elevator-button-layer3 {
+:active > .button1 .button-layer3 {
   transform: translateY(-0.5em);
 }
-.elevator-button1 .elevator-button-layer4 {
+.button1 .button-layer4 {
   width: 5em;
   height: 5em;
   background-color: #f66f57;
@@ -68,13 +68,13 @@ body {
   transform: translateY(-1.5em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button1 .elevator-button-layer4 {
+:hover > .button1 .button-layer4 {
   background-color: #f77b65;
 }
-:active > .elevator-button1 .elevator-button-layer4 {
+:active > .button1 .button-layer4 {
   transform: translateY(-0.75em);
 }
-.elevator-button1 .elevator-button-layer5 {
+.button1 .button-layer5 {
   width: 5em;
   height: 5em;
   background-color: #f6765f;
@@ -83,10 +83,10 @@ body {
   transform: translateY(-2em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button1 .elevator-button-layer5 {
+:hover > .button1 .button-layer5 {
   background-color: #f78671;
 }
-:active > .elevator-button1 .elevator-button-layer5 {
+:active > .button1 .button-layer5 {
   transform: translateY(-1em);
 }
 
@@ -123,7 +123,7 @@ body {
   font-style: italic;
 }
 
-.elevator-button2 {
+.button2 {
   width: 5em;
   height: 5em;
   transform: rotateX(40deg);
@@ -135,7 +135,7 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-.elevator-button2 .elevator-button-layer1 {
+.button2 .button-layer1 {
   width: 5em;
   height: 5em;
   background-color: #3d90f4;
@@ -145,10 +145,10 @@ body {
   box-shadow: 0 0 20px 0 rgb(154, 151, 151);
   border-radius: 2.5em;
 }
-:hover > .elevator-button2 .elevator-button-layer1 {
+:hover > .button2 .button-layer1 {
   background-color: #4192f5;
 }
-.elevator-button2 .elevator-button-layer2 {
+.button2 .button-layer2 {
   width: 5em;
   height: 5em;
   background-color: #4695f5;
@@ -157,13 +157,13 @@ body {
   transform: translateY(-0.5em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button2 .elevator-button-layer2 {
+:hover > .button2 .button-layer2 {
   background-color: #4d99f5;
 }
-:active > .elevator-button2 .elevator-button-layer2 {
+:active > .button2 .button-layer2 {
   transform: translateY(-0.25em);
 }
-.elevator-button2 .elevator-button-layer3 {
+.button2 .button-layer3 {
   width: 5em;
   height: 5em;
   background-color: #4e9af5;
@@ -172,13 +172,13 @@ body {
   transform: translateY(-1em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button2 .elevator-button-layer3 {
+:hover > .button2 .button-layer3 {
   background-color: #59a0f6;
 }
-:active > .elevator-button2 .elevator-button-layer3 {
+:active > .button2 .button-layer3 {
   transform: translateY(-0.5em);
 }
-.elevator-button2 .elevator-button-layer4 {
+.button2 .button-layer4 {
   width: 5em;
   height: 5em;
   background-color: #579ef6;
@@ -187,13 +187,13 @@ body {
   transform: translateY(-1.5em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button2 .elevator-button-layer4 {
+:hover > .button2 .button-layer4 {
   background-color: #65a7f7;
 }
-:active > .elevator-button2 .elevator-button-layer4 {
+:active > .button2 .button-layer4 {
   transform: translateY(-0.75em);
 }
-.elevator-button2 .elevator-button-layer5 {
+.button2 .button-layer5 {
   width: 5em;
   height: 5em;
   background-color: #5fa3f6;
@@ -202,10 +202,10 @@ body {
   transform: translateY(-2em);
   border-radius: 2.5em;
 }
-:hover > .elevator-button2 .elevator-button-layer5 {
+:hover > .button2 .button-layer5 {
   background-color: #71aef7;
 }
-:active > .elevator-button2 .elevator-button-layer5 {
+:active > .button2 .button-layer5 {
   transform: translateY(-1em);
 }
 

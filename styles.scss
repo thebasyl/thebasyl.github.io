@@ -16,7 +16,7 @@ body
         $base-color: rgb(53, 139, 244);
     }
 
-    .elevator-button#{$b}
+    .button#{$b}
     {
         width: 5em;
         height: 5em;
@@ -35,7 +35,7 @@ body
 
         @for $i from 1 through 5
         {
-            .elevator-button-layer#{$i}
+            .button-layer#{$i}
             {
                 width: 5em;
                 height: 5em;
