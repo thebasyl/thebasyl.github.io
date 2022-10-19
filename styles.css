@@ -1,7 +1,6 @@
 body {
   margin: 0;
   overflow: hidden;
-  background-color: lightblue;
 }
 
 .button1 {
@@ -255,6 +254,62 @@ body {
   100% {
     content: url("svg/info1.svg");
   }
+}
+.game-boxes {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev {
+  left: 30%;
+  top: 30%;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.63, -0.8, 0.5, 1.61);
+  transform: rotateX(-30deg) rotateY(20deg) translateY(10em);
+  height: 0;
+  background-color: red;
+}
+.dev.hidden {
+  transform: rotateX(0deg) rotateY(0deg) translateY(50vh);
+}
+.dev .face1 {
+  height: 7em;
+  width: 30em;
+  background-size: cover;
+  background-color: #F1F3F2;
+  background-image: url("svg/face2.svg");
+}
+.dev .face2 {
+  height: 15em;
+  width: 30em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("svg/face1.svg");
+  transform: rotateX(90deg) translateZ(14.5em) translateY(-7.5em);
+}
+.dev .bottom-shadow {
+  height: 15em;
+  width: 30em;
+  box-shadow: 0 0 15em 0 rgba(0, 0, 0, 0.3);
+  transform: rotateX(90deg) translateZ(29.5em) translateY(-7.5em);
+}
+.dev .face3 {
+  height: 7em;
+  width: 15em;
+  background-color: #F1F3F2;
+  transform: rotateY(90deg) translateX(7.5em) translateY(-22em) translateZ(-7.5em);
+}
+.dev .face {
+  transition: 0.2s ease;
+  box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2) inset;
+}
+:hover > .dev .face {
+  cursor: pointer;
+  filter: brightness(105%);
 }
 
 /*# sourceMappingURL=styles.css.map */
