@@ -153,22 +153,20 @@ body
 }
 
 .dev 
-{
+{   
     left: 30%;
     top: 30%;
 
     transform-style: preserve-3d;
     transition: transform 1s cubic-bezier(.82, -0.74, .36, 1.56);
-    transform: rotateX(-30deg) rotateY(20deg) translateY(10em);
+    transform: rotateX(-30deg) rotateY(20deg) translateY(10em) translateX(9em);
 
     &.hidden 
     {
-        transform: rotateX(0deg) rotateY(0deg) translateY(50vh);
+        transform: rotateX(0deg) rotateY(0deg) translateY(50vh) translateX(9em);
     }
 
     height: 0;
-
-    background-color: red;
 
     .face1 
     {
@@ -197,7 +195,7 @@ body
         height: 15em;
         width: 30em;
 
-        box-shadow: 0 0 15em 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 15em 0 rgba(0, 0, 0, 0.1);
 
         transform: rotateX(90deg) translateZ(29.5em) translateY(-7.5em);
     }
@@ -207,7 +205,8 @@ body
         height: 7em;
         width: 15em;
 
-        background-color: #F1F3F2;
+        background-size: cover;
+        background-image: url("svg/face3.svg");
 
         transform: rotateY(90deg) translateX(7.5em) translateY(-22em) translateZ(-7.5em);
     }
@@ -222,6 +221,79 @@ body
             filter: brightness(105%);
         }
 
-        box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0 0 0.5em 0 rgba(74, 74, 74, 0.05) inset;
+    }
+}
+
+.upcoming 
+{
+    left: 30%;
+    top: 30%;
+
+    transform-style: preserve-3d;
+    transition: transform 1s 0.1s cubic-bezier(.82, -0.74, .36, 1.56);
+    transform: rotateX(-30deg) rotateY(10deg) translateY(0em) translateX(-10em) translateZ(-10.5em);
+
+    &.hidden 
+    {
+        transform: rotateX(30deg) rotateY(0deg) translateX(-10em) translateZ(-10.5em) translateY(50vh);
+    }
+
+    height: 0;
+
+    .face1 
+    {
+        height: 12em;
+        width: 12em;
+
+        background-size: cover;
+        background-image: url("svg/face2-2.svg");
+
+        transform: translateX(0em) translateY(0em) translateZ(0em);
+    }
+
+    .face2 
+    {
+        height: 12em;
+        width: 12em;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("svg/face1-2.svg");
+
+        transform: rotateX(90deg) translateZ(18em) translateY(-6em) translateX(0em);
+    }
+
+    .bottom-shadow 
+    {
+        height: 12em;
+        width: 12em;
+
+        box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.3);
+
+        transform: rotateX(90deg) translateZ(30em) translateY(-6em) translateX(0em);
+    }
+
+    .face3 
+    {
+        height: 12em;
+        width: 12em;
+
+        background-color: #36383C;
+
+        transform: rotateY(90deg) translateX(6em) translateY(-24em) translateZ(-6em);
+    }
+
+    .face 
+    {
+        transition: 0.2s ease;
+
+        :hover > &
+        {
+            cursor: pointer;
+            filter: brightness(105%);
+        }
+
+        box-shadow: 0 0 0.5em 0 rgba(255, 255, 255, 0.05) inset;
     }
 }
