@@ -33,3 +33,17 @@ for(let w = 0; w < width; w++)
         });
     }
 }
+
+const menu_items = document.getElementsByClassName('menu-item');
+for(let menu_item of menu_items)
+{
+    menu_item.addEventListener('mouseover', () => 
+    {
+        menu_item.style = `background-color: ${ menu_item.dataset.colour }`;
+    });
+    
+    menu_item.addEventListener('mouseleave', () => 
+    {
+        menu_item.style = "";
+    });
+}
