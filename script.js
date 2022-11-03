@@ -26,7 +26,6 @@ for(let w = 0; w < width; w++)
 
         square.addEventListener('mouseenter', async() => 
         {
-            console.log(~1, 1 << 24)
             square.style = `background-color: #${ ((1 << 24) * Math.random() | 0).toString(16) }`;
             await wait(300);
             square.style = "background-color: #000";
@@ -46,4 +45,14 @@ for(let menu_item of menu_items)
     {
         menu_item.style = "";
     });
+}
+
+function basil()
+{
+    alert("oops! that page doesnt exist, yet. More information about Basil coming soon.\n- Noel Nimstad")
+}
+
+function UCG()
+{
+    alert("oops! that page doesnt exist, yet. More information about Untitled Card Game is coming soon.\n- Noel Nimstad")
 }
