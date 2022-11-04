@@ -1,5 +1,6 @@
-let width = 40;
-let height = 20;
+let squareWidth = 40;
+let width;
+let height;
 
 function wait(ms)
 {
@@ -15,34 +16,54 @@ function wait(ms)
 const squaresDiv = document.getElementById('squares');
 let squares = [];
 
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+function genSquares()
 {
-    width = 10;
-    height = 20;
+    width = Math.floor(window.innerWidth / squareWidth);
+    height = Math.floor(window.innerHeight / squareWidth);
 
-    for(let i = 0; i < width * height; i++)
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     {
-        const square = document.createElement('div');
-        square.classList.add('square-mobile');
-        squaresDiv.append(square);
-        squares.push(square);
-    }
-} else 
-{
-    for(let i = 0; i < width * height; i++)
-    {
-        const square = document.createElement('div');
-        square.classList.add('square');
-        squaresDiv.append(square);
-        squares.push(square);
-
-        square.addEventListener('mouseenter', async() => 
+        for(let i = 0; i < width * height; i++)
         {
-            square.style = `background-color: #${ ((1 << 24) * Math.random() | 0).toString(16) }`;
-            await wait(300);
-            square.style = "background-color: #000";
-        });
+            const square = document.createElement('div');
+            square.classList.add('square');
+            square.style.width = `calc(100vw / ${ width })`;
+            square.style.height = `calc(100vh / ${ height })`;
+            squaresDiv.append(square);
+            squares.push(square);
+        }
+    } else 
+    {
+        for(let i = 0; i < width * height; i++)
+        {
+            const square = document.createElement('div');
+            square.classList.add('square');
+            square.style.width = `calc(100vw / ${ width })`;
+            square.style.height = `calc(100vh / ${ height })`;
+            squaresDiv.append(square);
+            squares.push(square);
+
+            square.addEventListener('mouseenter', async() => 
+            {
+                square.style.backgroundColor = `#${ ((1 << 24) * Math.random() | 0).toString(16) }`;
+                await wait(300);
+                square.style.backgroundColor = "#000";
+            });
+        }
     }
+}
+
+genSquares();
+
+window.onresize = () => 
+{
+    const squaresDOM = document.querySelectorAll('.square');
+    for(let square of squaresDOM)
+    {
+        square.remove();
+    }
+
+    genSquares();
 }
 
 const menu_items = document.getElementsByClassName('menu-item');
@@ -50,7 +71,8 @@ for(let menu_item of menu_items)
 {
     menu_item.addEventListener('mouseover', () => 
     {
-        menu_item.style = `background-color: ${ menu_item.dataset.colour }`;
+        menu_item.style.backgroundColor = `${ menu_item.dataset.colour }`;
+        menu_item.style.borderBottom = `${ menu_item.dataset.colour } 1px solid`;
     });
     
     menu_item.addEventListener('mouseleave', () => 
@@ -59,22 +81,12 @@ for(let menu_item of menu_items)
     });
 }
 
-function basil()
-{
-    alert("oops! that page doesnt exist, yet. More information about Basil coming soon.\n- Noel Nimstad")
-}
-
-function UCG()
-{
-    alert("oops! that page doesnt exist, yet. More information about Untitled Card Game is coming soon.\n- Noel Nimstad")
-}
-
 async function ColourSquare()
 {
     const square = squares[Math.floor(Math.random() * squares.length)];
-    square.style = `background-color: #${ ((1 << 24) * Math.random() | 0).toString(16) }`;
+    square.style.backgroundColor = `#${ ((1 << 24) * Math.random() | 0).toString(16) }`;
     await wait(300);
-    square.style = "background-color: #000";
+    square.style.backgroundColor = "#000";
 }
 
 async function RandomSquareEffect()

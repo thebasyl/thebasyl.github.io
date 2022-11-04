@@ -25,20 +25,6 @@ body
 .square
 {
     background-color: black;
-
-    width: calc(100vw / 40);
-    height: calc(100vh / 20);
-
-    transition: 0.2s;
-}
-
-.square-mobile
-{
-    background-color: black;
-
-    width: calc(100vw / 10);
-    height: calc(100vh / 20);
-
     transition: 0.2s;
 }
 
@@ -118,4 +104,29 @@ hr
     position: absolute;
     bottom: 0.5em;
     font-size: 0.9em;
+}
+
+@media only screen and (min-width: 1500px)
+{
+    section 
+    {
+        text-align: center;
+    }
+
+    .wrapper 
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    p 
+    {
+        max-width: 1500px;
+        text-align: start;
+    }
+
+    .menu 
+    {
+        text-align: start;
+    }
 }
