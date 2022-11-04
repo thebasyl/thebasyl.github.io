@@ -15,9 +15,21 @@ function wait(ms)
 const squaresDiv = document.getElementById('squares');
 let squares = [];
 
-for(let w = 0; w < width; w++)
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 {
-    for(let h = 0; h < height; h++)
+    width = 10;
+    height = 20;
+
+    for(let i = 0; i < width * height; i++)
+    {
+        const square = document.createElement('div');
+        square.classList.add('square-mobile');
+        squaresDiv.append(square);
+        squares.push(square);
+    }
+} else 
+{
+    for(let i = 0; i < width * height; i++)
     {
         const square = document.createElement('div');
         square.classList.add('square');
@@ -55,4 +67,29 @@ function basil()
 function UCG()
 {
     alert("oops! that page doesnt exist, yet. More information about Untitled Card Game is coming soon.\n- Noel Nimstad")
+}
+
+async function ColourSquare()
+{
+    const square = squares[Math.floor(Math.random() * squares.length)];
+    square.style = `background-color: #${ ((1 << 24) * Math.random() | 0).toString(16) }`;
+    await wait(300);
+    square.style = "background-color: #000";
+}
+
+async function RandomSquareEffect()
+{
+    ColourSquare();
+    await wait(700);
+    RandomSquareEffect();
+}
+
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+{
+    (async() => 
+    {
+        RandomSquareEffect();
+        await wait(300);
+        RandomSquareEffect();
+    })();
 }
